@@ -2,7 +2,7 @@
 Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h (no objects, simple)
 
 The process was simple take rtmidi_c.h and converte with c2nim tool getting rtmin_c.nim.
-The only change in rtmini_c.h necesary for me was to delete the label RTMIAAPI in all the text.
+The only change in rtmini_c.h necesary for me was to delete the label RTMIDIAPI in all the text.
 After That we can use the binding to rtmidi.dll in windows or any other pltaform, without object.
 
 Example 
