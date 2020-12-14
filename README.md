@@ -6,7 +6,7 @@ The only change in rtmini_c.h necesary for me was to delete the label RTMIDIAPI 
 After That we can use the binding to rtmidi.dll in windows or any other pltaform.
 - c2nim is a Tool in https://github.com/nim-lang/c2nim, 
 - RtMidi project  in https://github.com/thestk/rtmidi
-I add rtmidi.dll library for windows to test, in the file rtmidi_c.h or rtmidi_c.nim converted,
+I add rtmidi.dll library for test it in windows, in the file rtmidi_c.h or rtmidi_c.nim converted,
 you can find the names of the rtmidi library for Mac and Linux.
 - Mac -> "librtmidi.dylib"
 - Linux-> "librtmidi.so"
