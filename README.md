@@ -10,9 +10,8 @@ I add rtmidi.dll library for windows to test, in the file rtmidi_c.h or rtmidi_c
 you can find the names of the rtmidi library for Mac and Linux.
 Mac -> "librtmidi.dylib"
 Linux-> "librtmidi.so"
-
 Example, compile and run>   nim c -r test.nim,  Code test.nim
------------------------------------------------
+
 import rtmidi_c 
 
 var  midiin:   RtMidiInPtr 
