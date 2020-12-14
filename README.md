@@ -11,47 +11,35 @@ you can find the names of the rtmidi library for Mac and Linux.
 - Mac -> "librtmidi.dylib"
 - Linux-> "librtmidi.so"
 - Example, compile and run>   nim c -r test.nim,  Code test.nim
+'
+import rtmidi_c 
 
->import rtmidi_c 
->
->var  midiin:   RtMidiInPtr 
+var  midiin:   RtMidiInPtr 
+var  midiout:  RtMidiOutPtr
+var  device:   RtMidiPtr
 
->var  midiout:  RtMidiOutPtr
+midiin = rtmidi_in_create_default()
+midiout = rtmidi_out_create_default()
 
->var  device:   RtMidiPtr
->
->
->midiin = rtmidi_in_create_default()
+var portsin  =  rtmidi_get_port_count (midiin)
+var portsout =  rtmidi_get_port_count (midiout)
 
->midiout = rtmidi_out_create_default()
->
->var portsin  =  rtmidi_get_port_count (midiin)
+echo portsin
+echo portsout
 
->var portsout =  rtmidi_get_port_count (midiout)
->
->echo portsin
+var port: cstring
 
->echo portsout
->
->var port: cstring
+echo ""
+echo "Output ports: "
 
->echo ""
+for i in 0 ..< portsout  :
+   port = rtmidi_get_port_name(midiout, i)
+   echo port
+echo ""
 
->echo "Output ports: "
->
->for i in 0 ..< portsout  :
+echo "Input Ports: "
 
->   port = rtmidi_get_port_name(midiout, i)
-
->   echo port
-
->echo ""
->
->echo "Input Ports: "
-
->for i in 0 ..< portsin  :
-
->   port = rtmidi_get_port_name(midiin, i)
-
->   echo port
-
+for i in 0 ..< portsin  :
+   port = rtmidi_get_port_name(midiin, i)
+   echo port
+'
