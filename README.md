@@ -1,9 +1,9 @@
 # RtMidiC
 Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h 
 
-The process was simple take rtmidi_c.h and converte with c2nim tool getting rtmin_c.nim.
+The process was simple take rtmidi_c.h and I did convertion with c2nim tool getting rtmin_c.nim.
 The only change in rtmini_c.h necesary for me was to delete the label RTMIDIAPI in all the text.
-After That we can use the binding to rtmidi.dll in windows or any other pltaform, without object.
+After That we can use the binding to rtmidi.dll in windows or any other pltaform.
 - c2nim is a Tool in https://github.com/nim-lang/c2nim, 
 - RtMidi project  in https://github.com/thestk/rtmidi
 I add rtmidi.dll library for windows to test, in the file rtmidi_c.h or rtmidi_c.nim converted,
