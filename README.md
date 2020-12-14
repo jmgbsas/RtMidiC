@@ -11,7 +11,7 @@ you can find the names of the rtmidi library for Mac and Linux.
 - Mac -> "librtmidi.dylib"
 - Linux-> "librtmidi.so"
 - Example, compile and run>   nim c -r test.nim,  Code test.nim
----
+```
 import rtmidi_c 
 
 var  midiin:   RtMidiInPtr 
@@ -42,4 +42,5 @@ echo "Input Ports: "
 for i in 0 ..< portsin  :
    port = rtmidi_get_port_name(midiin, i)
    echo port
----
+```
+
