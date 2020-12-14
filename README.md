@@ -1,5 +1,5 @@
 # RtMidiC
-Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h 
+Binding, Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h 
 
 The process was simple take rtmidi_c.h and I did convertion with c2nim tool getting rtmin_c.nim.
 The only change in rtmini_c.h necesary for me was to delete the label RTMIDIAPI in all the text.
