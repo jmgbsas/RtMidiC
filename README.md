@@ -1,5 +1,5 @@
 # RtMidiC
-Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h (no objects, simple)
+Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h (no objects, simple as lua do it)
 
 The process was simple take rtmidi_c.h and converte with c2nim tool getting rtmin_c.nim.
 The only change in rtmini_c.h necesary for me was to delete the label RTMIDIAPI in all the text.
