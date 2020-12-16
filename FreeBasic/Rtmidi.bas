@@ -1,5 +1,5 @@
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
-' daptthe path to yout installation 
+' the path to yout installation 
 #Inclib  "rtmidi.dll"
 
 dim midiin As   RtMidiInPtr 
@@ -41,13 +41,13 @@ Dim result As Integer
 
 portsout = 0
 nombre = Allocate( 25 )
-' here the name ndport  are coded manually but you can do it 
+' here the name and port, are hard coded manually but you can do it 
 ' asking to select one output and port
 *nombre = "CoolSoft VirtualMIDISynth"
 ' *nombre = "Microsoft GS WavetableSynth"
 rtmidi_open_port (midiout,portsout, nombre)
 Sleep (50)
-'enviando mensaje
+'sending  message
  
 message(1) = CUByte(144)
 message(2) = CUByte(64)
@@ -63,7 +63,7 @@ Print "ptr mesg ", p
 Print "length msg", leng
 
 result = rtmidi_out_send_message (midiout, p, leng)
-Print "result envio on ", result
+Print "result for on ", result
 
 Sleep (1500)
 
@@ -72,12 +72,10 @@ message(2) = CUByte(64)
 message(3) = CUByte(40)
 
 result = rtmidi_out_send_message (midiout, p, leng)
-Print "envio mensagge off ", result
+Print "send mensagge off ", result
 Print "midiout ", midiout
 Print "ptr mesg ", p
 Print "length msg", leng
-
-'rtmidi_out_free(midiout)
 
 rtmidi_close_port(midiout)
  
