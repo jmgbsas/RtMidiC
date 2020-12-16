@@ -1,7 +1,8 @@
 # RtMidiC
 Binding, Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h 
 This is a test while I am learning a little of Nim, but too Rust, and want to apply in freebasic the 
-interoreability lerned. The 3 languages are compilers run with MSYS2/ming64 and use gcc.
+interoperability lerned. The 3 languages are compilers run with MSYS2/ming64 
+and all are using gcc in my case. I believe that the prformance will be similar, the dll is done in C++.
 
 The process was simple take rtmidi_c.h and I did convertion with c2nim tool getting rtmin_c.nim.
 The only change in rtmini_c.h necesary for me was to delete the label RTMIDIAPI in all the text.
@@ -13,6 +14,12 @@ you can find the names of the rtmidi library for Mac and Linux.
 - Mac -> "librtmidi.dylib"
 - Linux-> "librtmidi.so"
 - Example, compile and run>   nim c -r test.nim,  Code test.nim
+- In FreeBasic folder are the elements for that language (console windows ...and you need to add
+in the compilation command or in the ide -lrtmidil.dll ....to test in console
+I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only rtmidi_c.bi in the Include
+#include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
+#Inclib  "rtmidi.dll" 
+#code example in nim very basic, I send some midi signals in the file test.nim. 
 ```
 import rtmidi_c 
 
