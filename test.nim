@@ -16,7 +16,7 @@ echo portsout
 
 var port: cstring
 echo ""
-echo "puertos de salida"
+echo "Output ports "
 
 var name: cstring
 
@@ -28,7 +28,7 @@ for i in 0 ..< portsout  :
      echo name
    echo ""
 
-echo "puertos de entrada"
+echo "Input ports"
 
 
 for i in 0 ..< portsin  :
