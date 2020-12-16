@@ -37,7 +37,7 @@ for i in 0 ..< portsin  :
 
 rtmidi_open_port(midiout, 0, name)
 
-var msg: array[10, cuchar]
+var msg: array[3, cuchar]
 var p: ptr cuchar = addr(msg[0])
 
 
