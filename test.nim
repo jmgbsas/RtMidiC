@@ -61,3 +61,4 @@ msg[2] = 40.cuchar
 rta =  rtmidi_out_send_message(midiout, p, leng) 
 
 rtmidi_close_port(midiout)
+rtmidi_out_free(midiout)
