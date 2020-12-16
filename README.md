@@ -1,7 +1,7 @@
 # RtMidiC
 Binding, Nim Calling C++ Rtmidi Library, with C Interface rtmidi_c.h 
 This is a test while I am learning a little of Nim, but too Rust, and want to apply in freebasic the 
-interoperability lerned. The 3 languages are compilers run with MSYS2/ming64 
+interoperability learned. The 3 languages are compilers run with MSYS2/ming64 
 and all are using gcc in my case. I believe that the prformance will be similar, the dll is done in C++.
 
 The process was simple take rtmidi_c.h and I did convertion with c2nim tool getting rtmin_c.nim.
