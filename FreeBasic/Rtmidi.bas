@@ -19,14 +19,14 @@ Print portsout
 Dim nombre As ZString ptr
 
 Print ""
-Print  "puertos de salida"
+Print  "outut ports"
 Dim i As INTeger
 for i = 0 to portsout -1 
    nombre = rtmidi_get_port_name(midiout, i)
    print *nombre
 Next   
 Print ""
-print "puertos de entrada"
+print "input ports"
 for i = 0 to  portsin -1  
    nombre = rtmidi_get_port_name(midiin, i)
    print *nombre
@@ -41,6 +41,8 @@ Dim result As Integer
 
 portsout = 0
 nombre = Allocate( 25 )
+' here the name ndport  are coded manually but you can do it 
+' asking to select one output and port
 *nombre = "CoolSoft VirtualMIDISynth"
 ' *nombre = "Microsoft GS WavetableSynth"
 rtmidi_open_port (midiout,portsout, nombre)
