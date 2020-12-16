@@ -78,5 +78,5 @@ Print "ptr mesg ", p
 Print "length msg", leng
 
 rtmidi_close_port(midiout)
- 
+rtmidi_out_free(midiout) 
 Sleep
