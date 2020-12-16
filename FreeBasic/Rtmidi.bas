@@ -56,7 +56,7 @@ dim p as UBYTE ptr = @message(1)
 leng = 3
  
 
-Print "enviando algo"
+Print "sending some midi "
 Sleep (100)
 Print "midiout ", midiout
 Print "ptr mesg ", p
