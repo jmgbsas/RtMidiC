@@ -18,11 +18,11 @@ you can find the names of the rtmidi library for Mac and Linux.
 (console windows ...and you need to add in the compilation command or in the ide -lrtmidil.dll ...
 to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only rtmidi_c.bi in the Include
 (no the mod..)
-- here is the SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
 ```
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
 #Inclib  "rtmidi.dll" 
 ```
+- The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
 
 #code example in nim very basic, I send some midi signals in the file test.nim. 
 ```
