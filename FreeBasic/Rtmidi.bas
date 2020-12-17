@@ -36,7 +36,7 @@ Next
 ' (byval device as RtMidiOutPtr, byval message as ubyte ptr, byval length as integer) as integer
 
 Dim message(1 To 1024) As UBYTE 
-' the upper ubound limit not sure if it limited or not
+' the upper ubound limit is not limited for output, but for input perhaps is 1024, see docs
 Dim leng As UInteger <8>
 
 
