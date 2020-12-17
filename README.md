@@ -38,7 +38,7 @@ if not swig will fail. Swig.swg is configuration file come with swig.exe.
 Download Swig.exe and modify makefile to your environment. Download rtmidi project and build rtmidi.dll o download
 a binary from some place. I did use version 4.0.0 and rtmidi_c.h is for that version. 
 if you download another version, convert the rtmidi_c.h from that version.
-Freebsic run in windows,  linux and Mac.
+Freebsic run in windows and linux.
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
 
