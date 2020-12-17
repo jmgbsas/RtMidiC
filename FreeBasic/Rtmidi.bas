@@ -76,10 +76,8 @@ Next
 close_port(midiout)
 out_free(midiout) 
 close_port(midiin)
- 
 
 Sleep
-
 
 End
 #Include "subRtmidi.bi"
