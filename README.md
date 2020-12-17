@@ -16,11 +16,11 @@ you can find the names of the rtmidi library for Mac and Linux.
 - Mac -> "librtmidi.dylib"
 - Linux-> "librtmidi.so"
 - Example, compile and run>   nim c -r test.nim,  Code test.nim
+- A binary version of rtmidi.dll for .Net: a fork project of rtmidi, run ok,has 820k of size https://github.com/micdah/RtMidi.Core/tree/master/RtMidi.Core
 - In FreeBasic folder are the elements for that language,freebasic can do graphics aplications too
 (but here is only console windows ...and you need to add in the compilation command or in the ide -lrtmidil.dll ...
 to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only rtmidi_c.bi in the Include
 (no the mod..)
-- A binary version of rtmidi.dll for .Net: a fork project of rtmidi, run ok,has 820k of size https://github.com/micdah/RtMidi.Core/tree/master/RtMidi.Core
 ```
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
 #Inclib  "rtmidi.dll" 
@@ -38,7 +38,7 @@ if not swig will fail. Swig.swg is configuration file come with swig.exe.
 Download Swig.exe and modify makefile to your environment. Download rtmidi project and build rtmidi.dll o download
 a binary from some place. I did use version 4.0.0 and rtmidi_c.h is for that version. 
 if you download another version, convert the rtmidi_c.h from that version.
-
+Freebsic run in windows,  linux and Mac.
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
 
