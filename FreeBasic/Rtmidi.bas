@@ -45,8 +45,10 @@ portsout = 0
 nombre = Allocate( 25 )
 ' here the name and port, are hard coded manually but you can do it 
 ' asking to select one output and port
-*nombre = "CoolSoft VirtualMIDISynth"
+' *nombre = "CoolSoft VirtualMIDISynth"
 ' *nombre = "Microsoft GS WavetableSynth"
+' The name of Port Could be space or null
+*nombre = ""
 rtmidi_open_port (midiout,portsout, nombre)
 Sleep (50)
 'sending  message
