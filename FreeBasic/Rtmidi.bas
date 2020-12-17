@@ -1,4 +1,4 @@
-#include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
+#include "C:\IT64\FbEdit\Inc\mod_rtmidi_c.bi"
 ' the path to yout installation 
 #Inclib  "rtmidi.dll"
 
@@ -77,6 +77,20 @@ Print "midiout ", midiout
 Print "ptr mesg ", p
 Print "length msg", leng
 
+'code for  get in message
+Dim size As UInteger<64> 
+Dim sizeptr As UInteger<64> Ptr = @size
+nombre = Allocate( 22 )
+*nombre = "E-DSP MIDI Port [BC00]" ' hrdcoded for now you first midi in dev
+
+rtmidi_open_port (midiin, portsout, nombre)
+rtmidi_in_get_message(midiin, p, sizeptr )
+For i = 1 To 10
+ Print message (i)
+Next
 rtmidi_close_port(midiout)
 rtmidi_out_free(midiout) 
+rtmidi_close_port(midiin)
+rtmidi_out_free(midiin) 
+
 Sleep
