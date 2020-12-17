@@ -51,9 +51,9 @@ rtmidi_open_port (midiout,portsout, nombre)
 Sleep (50)
 'sending  message
  
-message(1) = CUByte(144)
-message(2) = CUByte(64)
-message(3) = CUByte(127)
+message(1) = 144
+message(2) = 64
+message(3) = 127
 dim p as UBYTE ptr = @message(1)
 leng = 3
  
@@ -69,9 +69,9 @@ Print "result for on ", result
 
 Sleep (1500)
 
-message(1) = CUByte(128)
-message(2) = CUByte(64)
-message(3) = CUByte(40)
+message(1) = 128
+message(2) = 64
+message(3) = 40
 
 result = rtmidi_out_send_message (midiout, p, leng)
 Print "send mensagge off ", result
