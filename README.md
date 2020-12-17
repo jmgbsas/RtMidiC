@@ -29,6 +29,12 @@ sub rtmidi_in_set_callback      and
 function rtmidi_in_get_message
 for that reason both had an apostrophe (comment in basic)
 The rtmidi_in_get_message and both callback lines in rtmidi_c.bi, I could fixed, but not test it yet.
+There is amakefile inside folder freebasic is the way to run swig in windows ina shell of Msy2 interminal or
+command if Msys2 isin teh PATH ,,and run
+$ make rtmidi_c.h     --> and hit enter
+the rtmidi_c.bi will be generated, edit it and see the erros comparing with the fixed here.
+Warning after the line text with  "all :" in makefile,  the following lines must begin with a Tab,
+if not swig will fail.
 
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
