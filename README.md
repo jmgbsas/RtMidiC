@@ -38,8 +38,7 @@ if not swig will fail. Swig.swg is configuration file come with swig.exe.
 Download Swig.exe and modify makefile to your environment. Download rtmidi project and build rtmidi.dll o download
 a binary from some place. I did use version 4.0.0 and rtmidi_c.h is for that version.try to use a rtmidi.dll builded for mingw64. 
 if you download another version, convert the rtmidi_c.h from that version.
-A binary version of rtmidi.dll is here, a fork project in Rust, run ok,has 820k of size
- https://github.com/micdah/RtMidi.Core
+- A binary version of rtmidi.dll, a fork project in Rust, run ok,has 820k of size https://github.com/micdah/RtMidi.Core
 
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
