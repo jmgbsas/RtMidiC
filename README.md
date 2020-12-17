@@ -34,7 +34,7 @@ command if Msys2 isin teh PATH ,,and run
 $ make rtmidi_c.h     --> and hit enter
 the rtmidi_c.bi will be generated, edit it and see the erros comparing with the fixed here.
 Warning after the line text with  "all :" in makefile,  the following lines must begin with a Tab,
-if not swig will fail.
+if not swig will fail. Swig.swg is configuration file come with swig.exe
 
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
