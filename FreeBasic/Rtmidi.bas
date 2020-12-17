@@ -5,6 +5,8 @@
 dim midiin As   RtMidiInPtr 
 dim midiout As  RtMidiOutPtr
 Dim device As RtMidiPtr
+On Error Goto errorhandler
+
 midiin  = rtmidi_in_create_default()
 midiout = rtmidi_out_create_default()
 
@@ -92,5 +94,15 @@ rtmidi_close_port(midiout)
 rtmidi_out_free(midiout) 
 rtmidi_close_port(midiin)
 rtmidi_out_free(midiin) 
+
+Sleep
+End
+
+errorhandler:
+Dim e As Integer 
+' this routine do not run rtmidi_error(Rtmidierr, errorString) , butFreBasic manage for itself
+e = Err
+Print "Error detected ", e
+Print Erl, Erfn,Ermn,Err
 
 Sleep
