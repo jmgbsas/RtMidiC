@@ -28,8 +28,7 @@ they are in rtmidi_c.bi commented.
 sub rtmidi_in_set_callback      and
 function rtmidi_in_get_message
 for that reason both had an apostrophe (comment in basic)
-The rtmidi_in_get_message I could fixed, but not test it yet,
-only callback will be commented, i will try to fix in these days.
+The rtmidi_in_get_message and both callback lines in rtmidi_c.bi, I could fixed, but not test it yet.
 
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
