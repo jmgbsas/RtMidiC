@@ -35,10 +35,11 @@ $ make rtmidi_c.h     --> and hit enter
 the rtmidi_c.bi will be generated, edit it and see the erros comparing with the fixed here.
 Warning after the line text with  "all :" in makefile,  the following lines must begin with a Tab,
 if not swig will fail. Swig.swg is configuration file come with swig.exe.
-Download Swig.exe and modify makefile to your environment. Download rtmidi project and build rtmidi.dll o downlod a binary from some place ,I use version 4.0.0 and rtmidi_c.h is for that version.try to use a rtmidi.dll builded for mingw64. 
+Download Swig.exe and modify makefile to your environment. Download rtmidi project and build rtmidi.dll o download
+a binary from some place. I did use version 4.0.0 and rtmidi_c.h is for that version.try to use a rtmidi.dll builded for mingw64. 
 if you download another version, convert the rtmidi_c.h from that version.
-If youwant a binary for rtmidi.dll you can download from aa Fork of the project, is a projectin Rust run ok,has 820k of size
-https://github.com/micdah/RtMidi.Core
+A binary version of rtmidi.dll is here, a fork project in Rust, run ok,has 820k of size
+ https://github.com/micdah/RtMidi.Core
 
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
