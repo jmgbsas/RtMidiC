@@ -1,111 +1,93 @@
-#include "C:\IT64\FbEdit\Inc\mod_rtmidi_c.bi"
-' the path to yout installation 
-#Inclib  "rtmidi.dll"
-
-dim midiin As   RtMidiInPtr 
-dim midiout As  RtMidiOutPtr
-Dim device As RtMidiPtr
-On Error Goto errorhandler
+#Include "declareRtmidi.bi"
 
 midiin  = rtmidi_in_create_default()
 midiout = rtmidi_out_create_default()
 
-
 Dim As UInteger portsin, portsout
 
- portsin  =  rtmidi_get_port_count (midiin)
- portsout =  rtmidi_get_port_count (midiout)
+portsin  =  port_count (midiin)
+portsout =  port_count (midiout)
 Print portsin
 Print portsout
 
 Dim nombre As ZString ptr
 
 Print ""
-Print  "outut ports"
+Print  "Output port"
+
 Dim i As INTeger
 for i = 0 to portsout -1 
-   nombre = rtmidi_get_port_name(midiout, i)
+   nombre = port_name(midiout, i)
    print *nombre
 Next   
 Print ""
-print "input ports"
+print "Input port "
+
 for i = 0 to  portsin -1  
-   nombre = rtmidi_get_port_name(midiin, i)
+   nombre = port_name(midiin, i)
    print *nombre
 Next
-' (byval device as RtMidiOutPtr, byval message as ubyte ptr, byval length as integer) as integer
 
-Dim message(1 To 1024) As UBYTE 
-' the upper ubound limit is not limited for output, but for input perhaps is 1024, see docs
 Dim leng As UInteger <8>
-
-
 Dim result As Integer
 
 portsout = 0
-nombre = Allocate( 25 )
-' here the name and port, are hard coded manually but you can do it 
-' asking to select one output and port
-' *nombre = "CoolSoft VirtualMIDISynth"
-' *nombre = "Microsoft GS WavetableSynth"
-' The name of Port Could be space or null
 *nombre = ""
-rtmidi_open_port (midiout,portsout, nombre)
+open_port (midiout,portsout, nombre)
 Sleep (50)
-'sending  message
- 
-message(1) = 144
-message(2) = 64
-message(3) = 127
-dim p as UBYTE ptr = @message(1)
+
+note ("144,64,127")
+
 leng = 3
  
 
-Print "sending some midi "
+Print "sending some midi"
 Sleep (100)
 Print "midiout ", midiout
 Print "ptr mesg ", p
 Print "length msg", leng
 
-result = rtmidi_out_send_message (midiout, p, leng)
-Print "result for on ", result
+result = send_message (midiout, p, leng)
+Print "send result on ", result
 
 Sleep (1500)
 
-message(1) = 128
-message(2) = 64
-message(3) = 40
+note ("128,64,40")
 
-result = rtmidi_out_send_message (midiout, p, leng)
-Print "send mensagge off ", result
+result = send_message (midiout, p, leng)
+Print "result send mensagge off ", result
 Print "midiout ", midiout
 Print "ptr mesg ", p
 Print "length msg", leng
 
-'code for  get in message
-Dim size As UInteger<64> 
-Dim sizeptr As UInteger<64> Ptr = @size
-nombre = Allocate( 22 )
-*nombre = "E-DSP MIDI Port [BC00]" ' hrdcoded for now you first midi in dev
+'test get in
 
-rtmidi_open_port (midiin, portsout, nombre)
-rtmidi_in_get_message(midiin, p, sizeptr )
+nombre = Allocate( 22 )
+
+*nombre = "E-DSP MIDI Port [BC00]"
+
+open_port (midiin, portsout, nombre)
+get_message(midiin, p, sizeptr )
+
 For i = 1 To 10
  Print message (i)
 Next
-rtmidi_close_port(midiout)
-rtmidi_out_free(midiout) 
-rtmidi_close_port(midiin)
-rtmidi_out_free(midiin) 
+
+close_port(midiout)
+out_free(midiout) 
+close_port(midiin)
+ 
 
 Sleep
+
+
 End
+#Include "subRtmidi.bi"
 
 errorhandler:
 Dim e As Integer 
-' this routine do not run rtmidi_error(Rtmidierr, errorString) , butFreBasic manage for itself
 e = Err
-Print "Error detected ", e
-Print Erl, Erfn,Ermn,Err
-
-Sleep
+ Print "Error detectado ", e
+ Print Erl, Erfn,Ermn,Err
+Sleep 
+ 

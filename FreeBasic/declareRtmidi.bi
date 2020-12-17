@@ -1,6 +1,6 @@
 '#Include Once "windows.bi" 
 #Include once  "file.bi"
-#include "C:\IT64\FbEdit\Inc\mod_rtmidi_c.bi"
+#include "mod_rtmidi_c.bi"
 #Inclib  "rtmidi.dll"
 
 dim Shared midiin As   RtMidiInPtr 
