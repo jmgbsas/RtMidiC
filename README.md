@@ -20,8 +20,8 @@ you can find the names of the rtmidi library for Mac and Linux.
 (but here is only console windows ...and you need to add in the compilation command or in the ide -lrtmidil.dll ...
 to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only rtmidi_c.bi in the Include
 (no the mod..)
-- A binary version of rtmidi.dll, a fork project in Rust, run ok,has 820k of size https://github.com/micdah/RtMidi.Core
-```
+- A binary version of rtmidi.dll, a fork project in Rust, run ok,has 820k of size https://github.com/micdah/RtMidi.Core/tree/master/RtMidi.Core
+
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
 #Inclib  "rtmidi.dll" 
 There is 2 functions that the tool swig do a bad convertion in Freebasic case,I will search in the future
