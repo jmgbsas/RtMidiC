@@ -63,7 +63,7 @@ declare function rtmidi_in_get_current_api cdecl alias "rtmidi_in_get_current_ap
 'declare     sub rtmidi_in_set_callback cdecl alias "rtmidi_in_set_callback" (byval device as RtMidiInPtr, byval callback as RtMidiCCallback, byval userData as any ptr)
 declare      sub rtmidi_in_cancel_callback cdecl alias "rtmidi_in_cancel_callback" (byval device as RtMidiInPtr)
 declare      sub rtmidi_in_ignore_types cdecl alias "rtmidi_in_ignore_types" (byval device as RtMidiInPtr, byval midiSysex as integer, byval midiTime as integer, byval midiSense as integer)
-'declare function rtmidi_in_get_message cdecl alias "rtmidi_in_get_message" (byval device as RtMidiInPtr, byval message as ubyte ptr, byval size as size_t ptr) as double
+declare function rtmidi_in_get_message cdecl alias "rtmidi_in_get_message" (byval device as RtMidiInPtr, byval message as ubyte ptr, byval size as UInteger<64> ptr) as double
 declare function rtmidi_out_create_default cdecl alias "rtmidi_out_create_default" () as RtMidiOutPtr
 declare function rtmidi_out_create cdecl alias "rtmidi_out_create" (byval api as RtMidiApi, byval clientName as zstring ptr) as RtMidiOutPtr
 declare      sub rtmidi_out_free cdecl alias "rtmidi_out_free" (byval device as RtMidiOutPtr)
