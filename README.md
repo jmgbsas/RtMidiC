@@ -21,6 +21,11 @@ to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only 
 ```
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
 #Inclib  "rtmidi.dll" 
+There is 2 functions that the tool swig do a bad convertion in Freebasic case,I will search in the future
+they are in rtmidi_c.h
+sub rtmidi_in_set_callback      and
+function rtmidi_in_get_message
+for that reason are commented with an apostrophe (comment in basic)
 ```
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
 
