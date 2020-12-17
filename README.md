@@ -24,11 +24,10 @@ to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only 
 ```
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
 #Inclib  "rtmidi.dll" 
-There is 2 functions that the tool swig do a bad convertion in Freebasic case,I will search in the future
-they are in rtmidi_c.bi commented.
+There is 2 functions that the tool swig do a bad convertion in Freebasic case.
 sub rtmidi_in_set_callback      and
 function rtmidi_in_get_message
-for that reason both had an apostrophe (comment in basic)
+for that reason both had an apostrophe when I started (comment in basic)
 The rtmidi_in_get_message and both callback lines in rtmidi_c.bi, I could fixed, but not test it yet.
 There is amakefile inside folder freebasic is the way to run swig in windows in a shell of Msy2 interminal or
 command if Msys2 isin teh PATH ,,and run
