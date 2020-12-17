@@ -38,8 +38,10 @@ if not swig will fail. Swig.swg is configuration file come with swig.exe.
 Download Swig.exe and modify makefile to your environment. Download rtmidi project and build rtmidi.dll o download
 a binary from some place. I did use version 4.0.0 and rtmidi_c.h is for that version. 
 if you download another version, convert the rtmidi_c.h from that version.
-Freebsic run in windows and linux.
+Freebasic run in windows and linux. 
 ```
+- Freebasic https://sourceforge.net/projects/fbc/files/
+- Nim language https://nim-lang.org/
 - The SWIG FB Wrapper to download https://www.freebasic-portal.de/downloads/kommandozeilentools/swig-fb-wrapper-70.html
 
 #code example in nim very basic, I send some midi signals in the file test.nim. 
