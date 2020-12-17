@@ -35,7 +35,8 @@ for i = 0 to  portsin -1
 Next
 ' (byval device as RtMidiOutPtr, byval message as ubyte ptr, byval length as integer) as integer
 
-Dim message(1 To 3) As UBYTE 
+Dim message(1 To 1024) As UBYTE 
+' the upper ubound limit not sure if it limited or not
 Dim leng As UInteger <8>
 
 
