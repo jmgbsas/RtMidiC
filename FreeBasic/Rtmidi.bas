@@ -35,8 +35,8 @@ portsout = 0
 *nombre = ""
 open_port (midiout,portsout, nombre)
 Sleep (50)
-
-note ("144,64,127")
+'note, velocity 
+noteOn ("64,127")
 
 leng = 3
  
@@ -51,8 +51,8 @@ result = send_message (midiout, p, leng)
 Print "send result on ", result
 
 Sleep (1500)
-
-note ("128,64,40")
+'note, velocity
+noteOff ("64,40")
 
 result = send_message (midiout, p, leng)
 Print "result send mensagge off ", result
