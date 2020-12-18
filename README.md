@@ -23,6 +23,7 @@ to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ).
 More easy is to install rtmidi for MSYS2 with pacman -S mingw-w64-i686-rtmidi
 and compile with  fbc -g -s console (and will detect virtual ports too)
  and compilation run in 32 or 64 bits  
+- Freebasic run in windows and linux and exe files are 10 times smaller in size.
 - Another place to download rtmidi and Tutorial https://www.music.mcgill.ca/~gary/rtmidi/index.html#download
 ```
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
@@ -41,7 +42,7 @@ if not swig will fail. Swig.swg is configuration file come with swig.exe.
 Download Swig.exe and modify makefile to your environment. Download rtmidi project and build rtmidi.dll o download
 a binary from some place. I did use version 4.0.0 and rtmidi_c.h is for that version. 
 if you download another version, convert the rtmidi_c.h from that version.
-Freebasic run in windows and linux. 
+
 ```
 - Freebasic https://sourceforge.net/projects/fbc/files/
 - Nim language https://nim-lang.org/
