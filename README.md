@@ -16,7 +16,7 @@ you can find the names of the rtmidi library for Mac and Linux.
 - Mac -> "librtmidi.dylib"
 - Linux-> "librtmidi.so"
 - Example, compile and run>   nim c -r test.nim,  Code test.nim
-- A binary version of rtmidi.dll for .Net: a fork project of rtmidi, run ok,has 820k of size https://github.com/micdah/RtMidi.Core/tree/master/RtMidi.Core
+- A binary version of rtmidi.dll for .Net: a fork project of rtmidi, run ok,has 820k of size https://github.com/micdah/RtMidi.Core/tree/master/RtMidi.Core , rename rtmidi.dll as rtmidilib.dll
 - In FreeBasic folder are the elements for that language,freebasic can do graphics aplications too
 (but here is only console windows ...and you need to add in the compilation command or in the ide -lrtmidil.dll ...
 to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only rtmidi_c.bi in the Include
