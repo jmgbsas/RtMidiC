@@ -19,8 +19,10 @@ you can find the names of the rtmidi library for Mac and Linux.
 - A binary version of rtmidi.dll for .Net: a fork project of rtmidi, run ok,has 820k of size https://github.com/micdah/RtMidi.Core/tree/master/RtMidi.Core , rename rtmidi.dll as rtmidilib.dll
 - In FreeBasic folder are the elements for that language,freebasic can do graphics aplications too
 (but here is only console windows ...and you need to add in the compilation command or in the ide -lrtmidil.dll ...
-to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ), I use only rtmidi_c.bi in the Include
-(no the mod..)
+to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ).
+More easy is to install rtmidi for MSYS2 with pacman -S mingw-w64-i686-rtmidi
+and compile with  fbc -g -s console (and will detect virtual ports too)
+ and compilation run in 32 or 64 bits  
 - Another place to download rtmidi and Tutorial https://www.music.mcgill.ca/~gary/rtmidi/index.html#download
 ```
 #include "C:\IT64\FbEdit\Inc\rtmidi_c.bi"
