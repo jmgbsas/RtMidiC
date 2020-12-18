@@ -85,7 +85,7 @@ End
 errorhandler:
 Dim e As Integer 
 e = Err
- Print "Error detectado ", e
+ Print "Error detected ", e
  Print Erl, Erfn,Ermn,Err
 Sleep 
  
