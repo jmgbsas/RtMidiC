@@ -21,7 +21,7 @@ you can find the names of the rtmidi library for Mac and Linux.
 (but here is only console windows ...and you need to add in the compilation command or in the ide -lrtmidil.dll ...
 to test in console I use fbc -s console -arch amd64 -l rtmidi.dll ).
 More easy is to install rtmidi for MSYS2 with pacman -S mingw-w64-i686-rtmidi
-and compile with  fbc -g -s console (and will detect virtual ports too)
+and compile with  fbc -g -s console. 
  and compilation run in 32 or 64 bits  
 - Freebasic run in windows and linux and exe files are 10 times smaller in size.
 - Another place to download rtmidi and Tutorial https://www.music.mcgill.ca/~gary/rtmidi/index.html#download
