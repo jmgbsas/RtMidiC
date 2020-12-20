@@ -1,4 +1,6 @@
 #Include "declareRtmidi.bi"
+' compilar con fbc -s console -arch amd64 -gen gcc
+' asi usa md64 y rtmidi de ming64!!!
 
 midiin  = rtmidi_in_create_default()
 midiout = rtmidi_out_create_default()
@@ -35,37 +37,19 @@ portsout = 0
 *nombre = ""
 open_port (midiout,portsout, nombre)
 Sleep (50)
-'note, velocity 
-noteOn ("64,127")
-
+'nota, velocidad,canal 
+noteOn 64,127,1
 leng = 3
- 
-
-Print "sending some midi"
 Sleep (100)
-Print "midiout ", midiout
-Print "ptr mesg ", p
-Print "length msg", leng
-
 result = send_message (midiout, p, leng)
-Print "send result on ", result
 
 Sleep (1500)
-'note, velocity
-noteOff ("64,40")
+'nota, canal
+noteoff  64,1
 
 result = send_message (midiout, p, leng)
-Print "result send mensagge off ", result
-Print "midiout ", midiout
-Print "ptr mesg ", p
-Print "length msg", leng
 
-'test get in
-
-nombre = Allocate( 22 )
-
-*nombre = "E-DSP MIDI Port [BC00]"
-
+'nombre no se llena solo el port
 open_port (midiin, portsout, nombre)
 get_message(midiin, p, sizeptr )
 
