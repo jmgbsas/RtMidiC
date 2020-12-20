@@ -5,7 +5,7 @@
 midiin  = rtmidi_in_create_default()
 midiout = rtmidi_out_create_default()
 
-Dim As UInteger portsin, portsout
+Dim Shared As UInteger portsin, portsout
 
 portsin  =  port_count (midiin)
 portsout =  port_count (midiout)
@@ -36,19 +36,42 @@ Dim result As Integer
 portsout = 0
 *nombre = ""
 open_port (midiout,portsout, nombre)
-Sleep (50)
+Sleep 50
 'nota, velocidad,canal 
-noteOn 64,127,1
+noteOn 64,87,1
 leng = 3
-Sleep (100)
-result = send_message (midiout, p, leng)
-
-Sleep (1500)
+Sleep 1500
 'nota, canal
 noteoff  64,1
 
-result = send_message (midiout, p, leng)
+'result = send_message (midiout, p, leng)
+' envio de un acorde dupla, triada, cuaternaria
+' acorde2, acorde3, acorde4, acorde5...etc
+Sleep 500
+note2on  60,64,60,1
+Sleep 1000
+note2off 60,64,1
+Sleep 500
+note2on  60,67,90,1
+Sleep 1500
+note2off 60,67,1
+Sleep 1000
+note3on 60,64,67,60,1
+Sleep 1000
+note3off 60,64,67,1
+Sleep 3000
 
+note4on 60,64,67,71,60,1
+Sleep 1000
+note4off 60,64,67,71,1
+Sleep 3000
+
+note5on 48,60,64,67,71,60,1
+Sleep 1000
+note5off 48,60,64,67,71,1
+Sleep 3000
+
+' --------------------------------
 'nombre no se llena solo el port
 open_port (midiin, portsout, nombre)
 get_message(midiin, p, sizeptr )
