@@ -1,3 +1,4 @@
+#Include Once "windows.bi"
 #Include "declareRtmidi.bi"
 ' compilar con fbc -s console -arch amd64 -gen gcc
 ' asi usa md64 y rtmidi de ming64!!!
@@ -19,15 +20,15 @@ Print  "Output port"
 
 Dim i As INTeger
 for i = 0 to portsout -1 
-   nombre = port_name(midiout, i)
-   print *nombre
+    nombre = port_name(midiout, i)
+    print *nombre
 Next   
 Print ""
 print "Input port "
 
 for i = 0 to  portsin -1  
-   nombre = port_name(midiin, i)
-   print *nombre
+    nombre = port_name(midiin, i)
+    print *nombre
 Next
 
 Dim leng As UInteger <8>
@@ -77,7 +78,7 @@ open_port (midiin, portsout, nombre)
 get_message(midiin, p, sizeptr )
 
 For i = 1 To 10
- Print message (i)
+    Print message (i)
 Next
 
 close_port(midiout)
@@ -92,7 +93,7 @@ End
 errorhandler:
 Dim e As Integer 
 e = Err
- Print "Error detected ", e
- Print Erl, Erfn,Ermn,Err
+Print "Error detected ", e
+Print Erl, Erfn,Ermn,Err
 Sleep 
- 
+
