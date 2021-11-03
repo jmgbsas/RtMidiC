@@ -1,7 +1,7 @@
 '#Include Once "windows.bi" 
 #Include once  "file.bi"
 #include "mod_rtmidi_c.bi"
-#Inclib  "rtmidi.dll"
+#Inclib  "rtmidi"
 
 dim Shared midiin As   RtMidiInPtr 
 dim Shared midiout As  RtMidiOutPtr

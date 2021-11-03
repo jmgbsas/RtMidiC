@@ -1,7 +1,7 @@
 # compile and run>   nim c -r test.nim
 # Code test.nim
 
-import rtmidi_c, times , os
+import rtmidic, times , os
 
 var  midiin:   RtMidiInPtr 
 var  midiout:  RtMidiOutPtr
